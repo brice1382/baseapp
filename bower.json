@@ -2,7 +2,7 @@
   "name": "spire-base-project",
   "description": "A starter project for AngularJS",
   "version": "0.0.1",
-  "homepage": "https://github.com/brice1382/angular",
+  "homepage": "https://github.com/brice1382/baseapp",
   "license": "MIT",
   "dependencies": {
     "angular": "^1.6.6",
