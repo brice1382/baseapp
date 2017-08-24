@@ -1,0 +1,151 @@
+body {
+  background-color: #f5f2d5 !important; }
+
+hr {
+  border: 1px solid black; }
+
+.spacer {
+  height: 100px; }
+
+.spNav {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background-color: #577d7d !important;
+  border: none !important;
+  border-bottom: 1px solid black !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important; }
+
+.red {
+  background-color: #ef9796 !important; }
+
+.special {
+  font-family: 'Special Elite', cursive; }
+
+.marcellus {
+  font-family: 'Marcellus SC', serif; }
+
+.cutiveMono {
+  font-family: 'Cutive Mono', monospace; }
+
+.vastShadow {
+  font-family: 'Vast Shadow', cursive; }
+
+.rye {
+  font-family: 'Rye', cursive; }
+
+.pica {
+  font-family: 'IM Fell DW Pica SC', serif; }
+
+.ewert {
+  font-family: 'Ewert', cursive; }
+
+.color {
+  color: azure !important; }
+
+.buttonHolder {
+  text-align: center; }
+
+.boxShadow {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=18, Direction=135, Color=#000000)";
+  /*IE 8*/
+  -moz-box-shadow: 7px 7px 18px 3px rgba(0, 0, 0, 0.6);
+  /*FF 3.5+*/
+  -webkit-box-shadow: 7px 7px 18px 3px rgba(0, 0, 0, 0.6);
+  /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 7px 7px 18px 3px rgba(0, 0, 0, 0.6);
+  /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=18, Direction=135, Color=#000000);
+  /*IE 5.5-7*/ }
+
+.spBtn {
+  border: 1px solid black !important; }
+
+.spBtn:hover {
+  border: 0 !important; }
+
+.spinner {
+  position: fixed !important; }
+
+#overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5) center center no-repeat; }
+
+.centered {
+  float: none;
+  margin: 0 auto; }
+
+.buttonShadow {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=29, Direction=94, Color=#000000)";
+  /*IE 8*/
+  -moz-box-shadow: 1px 16px 29px -5px rgba(0, 0, 0, 0.6);
+  /*FF 3.5+*/
+  -webkit-box-shadow: 1px 16px 29px -5px rgba(0, 0, 0, 0.6);
+  /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 1px 16px 29px -5px rgba(0, 0, 0, 0.6);
+  /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=29, Direction=135, Color=#000000);
+  /*IE 5.5-7*/ }
+
+.logo {
+  border-radius: 10px;
+  width: 50px !important;
+  height: 50px !important;
+  display: block; }
+
+footer {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block; }
+  footer hr {
+    padding: 0;
+    margin: 0;
+    border: 1px solid black; }
+  footer .version {
+    text-align: center;
+    padding-top: 15px !important; }
+
+@media (max-width: 767px) {
+  .show-xs {
+    display: none !important; }
+
+  .showIt {
+    display: block; }
+
+  .mobile {
+    height: auto !important; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .show-sm {
+    display: none !important; }
+
+  .responsiveSection {
+    height: auto !important; }
+
+  .mobile {
+    height: auto !important; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .show-md {
+    display: none !important; }
+
+  .showIt {
+    display: none; } }
+@media (min-width: 1200px) {
+  .show-lg {
+    display: none !important; }
+
+  .showIt {
+    display: none; } }
+.testFrom input.ng-valid {
+  border: 2px solid green !important; }
+
+.testFrom input.ng-invalid {
+  border: 2px solid red !important; }
+
+/*# sourceMappingURL=main.css.map */

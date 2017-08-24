@@ -1,0 +1,12 @@
+// Form Validation
+.testFrom {
+  input.ng-valid {
+    border: 2px solid green !important;
+  }
+}
+
+.testFrom {
+  input.ng-invalid {
+    border: 2px solid red !important;
+  }
+}

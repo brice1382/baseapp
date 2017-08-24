@@ -1,0 +1,667 @@
+@import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light|Source+Code+Pro');
+
+// Main Styles
+body {
+  background-color: rgba(151, 151, 151, 0.85) !important;
+  //background-color: #6b6b6b !important;
+  height: auto !important;
+}
+
+// Home Page
+#jumbotronTxt {
+  text-align:center;
+  color: black;
+  padding: 0;
+  margin-top: 0;
+  border: none;
+  font-size: 100px;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 600;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#a3a3a3)";/*IE 8*/
+  text-shadow: 5px 3px 3px #a3a3a3;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#a3a3a3); /*IE 5.5-7*/
+}
+
+.parallax {
+  background-image: url("../assets/website_pic.png");
+
+  min-height: 100px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homeTable {
+  text-align: center;
+  font-size: 25px;
+  color: azure;
+  background-color: #003067;
+}
+
+.sectCustom {
+  background-image: $custBack;
+  height: 100px;
+  width: $w100;
+}
+
+.QC {
+  color:azure;
+  line-height: 100px;
+  font-size: 35px;
+  margin: 0;
+  text-align: right;
+}
+
+.tabOneText {
+  text-align: center;
+  font-size: 17px;
+  color: black;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+// About Page
+.snipTbl {
+  background-color: black;
+  color: white;
+}
+
+.snipCSClass {
+  color: $CSClass;
+  font-weight: bold;
+}
+
+.snipCSString {
+  color: $CSString;
+}
+
+.snipCSNameS {
+  color: $CSNameS;
+  font-weight: bold;
+}
+
+.snipHelp {
+  color: $helpGrey;
+}
+
+.snipCSComment {
+  color: $CSComment3;
+}
+
+.snipCSDAO {
+  color: $CSDAO;
+}
+
+.snipJSNGStr {
+  font-weight: bold;
+  color: $JSGree;
+}
+
+.snipJSNGFunc {
+  font-weight: bold;
+  color: $JSOrn;
+}
+
+.snipJSNGMdl {
+  font-weight: bold;
+  color: $JSPurp;
+}
+
+.snipJSNGFnName {
+  font-weight: bold;
+  color: $JSYell;
+}
+.docTableHead {
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+}
+
+.thOne {
+  text-align: center;
+  width: 39px !important;
+  color: azure;
+}
+
+.thTwo {
+  text-align: center;
+  font-weight: bold;
+  color: azure;
+  background-color: #003067;
+}
+
+.thThree {
+  width: 120px;
+  text-align: center;
+  color: azure;
+  background-color: #003067;
+}
+
+.sectionHead {
+  text-align: center;
+  font-weight: bold;
+  color: azure;
+  background-color: #003067;
+}
+
+.flash {
+  animation-iteration-count: 3;
+}
+
+.mobile {
+  display: none;
+}
+
+// Footer Styles
+.footer {
+  background-image: linear-gradient(to right, #000428, #004e92);
+  position: fixed !important;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border: 1px solid azure;
+  border-bottom: none;
+  padding-top: 16px !important;
+  width: 100% !important;
+  height: 50px;
+  top: auto !important;
+  right: 0;
+  color:azure !important;
+  bottom: 0 !important;
+  left: 0;
+  //display: block;
+  text-align: center;
+}
+
+.footer-sm {
+  background-image: linear-gradient(to right, #000428, #004e92);
+  position: fixed !important;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border: 1px solid azure;
+  border-bottom: none;
+  padding-top: 16px !important;
+  width: 100% !important;
+  height: 50px;
+  top: auto !important;
+  right: 0;
+  color:azure !important;
+  bottom: 0 !important;
+  left: 0;
+  //display: block;
+  text-align: center;
+}
+
+// Buttons
+.spBtn-prime {
+  background-image: linear-gradient(to right, #000428, #004e92) !important;
+  color: azure !important;
+  border-radius: 6px;
+  //font-weight: bold !important;
+  border-right: 3px solid black !important;
+  border-bottom: 3px solid black !important;
+  border-left: 3px solid azure !important;
+  border-top: 3px solid azure !important;
+  //-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=124, Color=#000000)" !important; /*IE 8*/
+  //-moz-box-shadow: 2px 3px 50px -3px #000000 !important; /*FF 3.5+*/
+  //-webkit-box-shadow: 2px 3px 50px -3px #000000 !important; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  //box-shadow: 2px 3px 50px -3px #000000 !important; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  //filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=135, Color=#000000) !important; /*IE 5.5-7*/
+}
+
+.spBtn-prime:hover {
+  box-shadow: none !important;
+  border-right: 3px solid azure !important;
+  border-bottom: 3px solid azure !important;
+}
+
+.spBtn-info {
+  background-image: linear-gradient(to right, #2ae1ff, #1d495f) !important;
+  color: black !important;
+  border-radius: 6px;
+  //font-weight: bold !important;
+  border-right: 3px solid black !important;
+  border-bottom: 3px solid black !important;
+  border-left: 3px solid azure !important;
+  border-top: 3px solid azure !important;
+  //-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=124, Color=#000000)" !important; /*IE 8*/
+  //-moz-box-shadow: 2px 3px 50px -3px #000000 !important; /*FF 3.5+*/
+  //-webkit-box-shadow: 2px 3px 50px -3px #000000 !important; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  //box-shadow: 2px 3px 50px -3px #000000 !important; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  //filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=135, Color=#000000) !important; /*IE 5.5-7*/
+}
+
+.spBtn-info:hover {
+  box-shadow: none !important;
+  border-right: 3px solid azure !important;
+  border-bottom: 3px solid azure !important;
+}
+
+.spBtn-succ {
+  background-image: linear-gradient(to right, #099216, #022606) !important;
+  color: azure !important;
+  border-radius: 6px;
+  //font-weight: bold !important;
+  border-right: 3px solid black !important;
+  border-bottom: 3px solid black !important;
+  border-left: 3px solid azure !important;
+  border-top: 3px solid azure !important;
+  //-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=124, Color=#000000)" !important; /*IE 8*/
+  //-moz-box-shadow: 2px 3px 50px -3px #000000 !important; /*FF 3.5+*/
+  //-webkit-box-shadow: 2px 3px 50px -3px #000000 !important; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  //box-shadow: 2px 3px 50px -3px #000000 !important; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  //filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=135, Color=#000000) !important; /*IE 5.5-7*/
+}
+
+.spBtn-succ:hover {
+  box-shadow: none !important;
+  //border: none !important;
+  border-right: 3px solid azure !important;
+  border-bottom: 3px solid azure !important;
+}
+
+.spBtn-dang {
+  background-image: linear-gradient(to right, #FF1D0D, #3b0804) !important;
+  color: azure !important;
+  border-radius: 6px;
+  //font-weight: bold !important;
+  border-right: 3px solid black !important;
+  border-bottom: 3px solid black !important;
+  border-left: 3px solid azure !important;
+  border-top: 3px solid azure !important;
+  //-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=124, Color=#000000)" !important; /*IE 8*/
+  //-moz-box-shadow: 2px 3px 50px -3px #000000 !important; /*FF 3.5+*/
+  //-webkit-box-shadow: 2px 3px 50px -3px #000000 !important; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  //box-shadow: 2px 3px 50px -3px #000000 !important; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  //filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=135, Color=#000000) !important; /*IE 5.5-7*/
+}
+
+.spBtn-dang:hover {
+  box-shadow: none !important;
+  border-right: 3px solid azure !important;
+  border-bottom: 3px solid azure !important;
+}
+
+.spBtn-dflt {
+  background-image: linear-gradient(to right, #a3a3a3, #3a3a3a) !important;
+  color: azure !important;
+  border-radius: 6px;
+  //font-weight: bold !important;
+  border-right: 3px solid black !important;
+  border-bottom: 3px solid black !important;
+  border-left: 3px solid azure !important;
+  border-top: 3px solid azure !important;
+  //-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=124, Color=#000000)" !important; /*IE 8*/
+  //-moz-box-shadow: 2px 3px 50px -3px #000000 !important; /*FF 3.5+*/
+  //-webkit-box-shadow: 2px 3px 50px -3px #000000 !important; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  //box-shadow: 2px 3px 50px -3px #000000 !important; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  //filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=135, Color=#000000) !important; /*IE 5.5-7*/
+}
+
+.spBtn-dflt:hover {
+  box-shadow: none !important;
+  //border: none !important;
+  border-right: 3px solid azure !important;
+  border-bottom: 3px solid azure !important;
+}
+
+.button-holder {
+  text-align: center;
+}
+
+.customPrimary {
+  background-image: linear-gradient(to right, #000428, #004e92) !important;
+  margin-left: 0 !important;
+  border-radius: 6px;
+  border-right: 3px solid black !important;
+  border-bottom: 3px solid black !important;
+  border-left: 3px solid azure !important;
+  border-top: 3px solid azure !important;
+  margin-top: 25px !important;
+  color: azure !important;
+  width: 200px !important;
+  height: 50px !important;
+  //-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=7, Direction=129, Color=#242424)"; /*IE 8*/
+  //-moz-box-shadow: 4px 5px 7px 3px #242424; /*FF 3.5+*/
+  //-webkit-box-shadow: 4px 5px 7px 3px #242424; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  //box-shadow: 4px 5px 7px 3px #242424; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  //filter: progid:DXImageTransform.Microsoft.Shadow(Strength=7, Direction=135, Color=#242424); /*IE 5.5-7*/
+}
+
+.customPrimary:hover {
+  width: 198px !important;
+  height: 48px !important;
+  border-right: 3px solid azure !important;
+  border-bottom: 3px solid azure !important;
+  box-shadow: none;
+}
+
+// CSS affects i.e. Box Shadow Text Shadow
+.boxShad {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=7, Direction=129, Color=#242424)"; /*IE 8*/
+  -moz-box-shadow: 4px 5px 7px 3px #242424; /*FF 3.5+*/
+  -webkit-box-shadow: 4px 5px 7px 3px #242424; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 4px 5px 7px 3px #242424; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=7, Direction=135, Color=#242424); /*IE 5.5-7*/
+}
+
+.insetShad {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=40, Direction=124, Color=#000000)"; /*IE 8*/
+  -moz-box-shadow: 2px 3px 40px 8px #000000 inset; /*FF 3.5+*/
+  -webkit-box-shadow: 2px 3px 40px 8px #000000 inset; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 2px 3px 40px 8px #000000 inset; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=40, Direction=135, Color=#000000); /*IE 5.5-7*/
+}
+
+.custom-bg {
+  background-image: linear-gradient(to right, #000428, #004e92);
+}
+
+.leftGrad {
+  background-image: linear-gradient(to left, #000428, #004e92);
+}
+
+.rightGrad {
+  background-image: linear-gradient(to right, #000428, #004e92);
+  color: azure;
+}
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.noMargin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: 1px solid azure; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-image: linear-gradient(to left, #000428, #004e92); /* Set a background color */
+  color: azure; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+// Spacers
+.space-down {
+  height: 75px;
+}
+
+.space-down-sm {
+  height: 50px
+}
+
+// Heights
+.section4 {
+  height: $s4;
+}
+
+.section5 {
+  height: $s5;
+}
+
+.spImg {
+  height: 800px;
+  width: 1100px;
+  margin-left: 5px;
+}
+
+#snipModal {
+  width: 60%
+}
+
+.special {
+  height: $special;
+}
+
+.lineH {
+  line-height: 35px !important;
+  font-size: 25px;
+  text-align: center;
+}
+
+.contactContainer {
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  width: 35%;
+}
+
+// Fonts
+#brand {
+  font-family: 'Pacifico', cursive;
+}
+
+.footer-sm {
+  display: none;
+}
+
+.smalls {
+  font-size: x-large;
+  text-align: center;
+  margin-top: 35px;
+}
+
+// Responsive Styles
+@media screen and (max-width: 640px) {
+  .nukeIt {
+    display: none;
+  }
+
+  .section4 {
+    height: 200px;
+  }
+
+  .spBtn-dang {
+    border-radius: 6px;
+    border-right: 2px solid black !important;
+    border-bottom: 2px solid black !important;
+    border-left: 2px solid azure !important;
+    border-top: 2px solid azure !important;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .nukeIt2 {
+    display: none;
+  }
+
+  //.QC {
+  //  font-size: 20px !important;
+  //  line-height: 0 !important;
+  //  margin-top: 20px !important;
+  //  text-align: center !important;
+  //}
+  //#myButt {
+  //  font-size: medium !important;
+  //  width: 100px !important;
+  //  height: 30px !important;
+  //}
+}
+
+@media screen and (max-width: 640px) {
+  #map {
+    height: 200px;
+  }
+
+  .footer-sm {
+    display: block;
+  }
+
+  #jumbotronTxt {
+    font-size: 50px !important;
+  }
+
+  .tBODY {
+    border: 1px solid azure !important;
+  }
+
+  .contactContainer {
+    width: 80% !important;
+  }
+
+  #myButt {
+    font-size: small !important;
+    width: 100px !important;
+    height: 30px !important;
+  }
+
+  #snipModal {
+    width: 95%
+  }
+
+  .lineH {
+    line-height: 20px !important;
+    border: none !important;
+  }
+
+  .spImg {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  #para {
+    height: 200px;
+  }
+
+  #tables {
+    border: 1px solid azure !important;
+  }
+
+  .QC {
+    font-size: 20px !important;
+    line-height: 0 !important;
+    margin-top: 20px !important;
+    text-align: center !important;
+  }
+
+  #pBody {
+    text-align: center;
+  }
+
+  .nukeIt {
+    display: none;
+  }
+
+  .homeTable {
+    font-size: 15px !important;
+  }
+
+  .mobile {
+    display: block;
+    text-align: center;
+  }
+
+  #testPanel {
+    width: 300px !important;
+    height: 200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: scroll;
+  }
+
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  #head {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  #trMobile {
+    border: none !important;
+    margin: 0 !important;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  #thOne {
+    display: none;
+  }
+
+  .thOne {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  .lineH {
+    font-size: 15px !important;
+  }
+
+}
+
+p {
+  margin: 0;
+  //padding: 5px 0 0 0;
+  font-size: 14px;
+  color: #666;
+}
