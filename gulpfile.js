@@ -8,17 +8,31 @@ gulp.task('concat', function () {
         './app/core-services/**/*.js'
     ])
         .pipe(concat('services.js'))
-        .pipe(gulp.dest('./app/test'))
+        .pipe(gulp.dest('./app/dist'))
 });
 
 function isOnlyChanged(event) {
     return event.type === 'changed';
 }
 
+gulp.task('build', function () {
+    gulp.src([
+        './app/views/_module.js',
+        './app/views/**/_module.js',
+        './app/views/**/*.js',
+        '!./app/views/**/*_test.js'
+    ])
+        .pipe(concat('dist.js'))
+        .pipe(gulp.dest('./app/dist/js'))
+});
+
 gulp.task('watch', function () {
-    gulp.watch('./app/core-services/**/*.js', function (event) {
+    gulp.watch([
+        './app/core-services/**/*.js',
+        './app/views/**/*.js'
+    ], function (event) {
         if (isOnlyChanged(event)) {
-            gulp.start('concat');
+            gulp.start(['concat', 'build']);
         }
     });
 });

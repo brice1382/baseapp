@@ -21,6 +21,6 @@
     "protractor": "^4.0.9"
   },
   "scripts": {
-    "start": "http-server -a localhost -p 4545 -c-1 ./app"
+    "start": "http-server -a localhost -p 62214 -c-1 ./app"
   }
 }

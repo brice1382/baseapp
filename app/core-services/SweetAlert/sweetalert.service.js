@@ -26,8 +26,14 @@
                 text: 'Are you sure you want to delete?',
                 showConfirmButton: true,
                 showCancelButton: true,
-                allowOutsideClick: false,
-                closeOnConfirm: true
+                allowOutsideClick: false
+            },
+            function (isConfirm) {
+                if (isConfirm) {
+
+                } else {
+
+                }
             });
         }
 

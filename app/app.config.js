@@ -18,6 +18,10 @@
             templateUrl: 'views/about/about.template.html',
             controller: 'AboutCtrl',
             controllerAs: 'ac'
+        }).when('/testing', {
+            templateUrl: 'views/testing/testing.template.html',
+            controller: 'TestingCtrl',
+            controllerAs: 'tc'
         }).when('/contact', {
             templateUrl: 'views/contact/contact.template.html',
             controller: 'ContactCtrl',

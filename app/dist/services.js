@@ -15,29 +15,6 @@
     'use strict';
 
     angular
-        .module('admin-service', []);
-})();
-
-
-(function () {
-    'use strict';
-
-    angular
-        .module('admin-service')
-        .service('AdminSvc', AdminSvc);
-
-    AdminSvc.$inject = [];
-
-    function AdminSvc() {
-
-    }
-})();
-
-
-(function () {
-    'use strict';
-
-    angular
         .module('auth-service', []);
 })();
 
@@ -81,6 +58,74 @@
     'use strict';
 
     angular
+        .module('admin-service', []);
+})();
+
+
+(function () {
+    'use strict';
+
+    angular
+        .module('admin-service')
+        .service('AdminSvc', AdminSvc);
+
+    AdminSvc.$inject = [];
+
+    function AdminSvc() {
+
+    }
+})();
+
+
+(function () {
+    'use strict';
+
+    angular
+        .module('goals-service', []);
+})();
+
+(function () {
+    'use strict';
+
+    angular
+        .module('goals-service')
+        .service('GoalsSvc', GoalsSvc);
+
+    GoalsSvc.$inject = [];
+
+    function GoalsSvc() {
+        var sv = this;
+    }
+})();
+
+(function () {
+    'use strict';
+
+    angular
+        .module('upload-service', []);
+})();
+
+
+(function () {
+    'use strict';
+
+    angular
+        .module('upload-service')
+        .service('UploadSvc', UploadSvc);
+
+    UploadSvc.$inject = ['$http', '$q'];
+
+    function UploadSvc($http, $q) {
+
+
+    }
+})();
+
+
+(function () {
+    'use strict';
+
+    angular
         .module('swal-service', []);
 })();
 
@@ -112,8 +157,14 @@
                 text: 'Are you sure you want to delete?',
                 showConfirmButton: true,
                 showCancelButton: true,
-                allowOutsideClick: false,
-                closeOnConfirm: true
+                allowOutsideClick: false
+            },
+            function (isConfirm) {
+                if (isConfirm) {
+
+                } else {
+
+                }
             });
         }
 
@@ -236,30 +287,6 @@
         function stopSpinner() {
             $rootScope.isLoading = false;
         }
-    }
-})();
-
-
-(function () {
-    'use strict';
-
-    angular
-        .module('upload-service', []);
-})();
-
-
-(function () {
-    'use strict';
-
-    angular
-        .module('upload-service')
-        .service('UploadSvc', UploadSvc);
-
-    UploadSvc.$inject = ['$http', '$q'];
-
-    function UploadSvc($http, $q) {
-
-
     }
 })();
 

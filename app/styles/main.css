@@ -1,5 +1,25 @@
 body {
+  height: auto;
   background-color: #f5f2d5 !important; }
+
+.spBtnWidth {
+  width: auto !important; }
+
+#currentTime {
+  cursor: pointer; }
+
+.clock {
+  text-align: center !important;
+  height: 20px !important;
+  border-radius: 6px !important;
+  border: 1px solid white !important;
+  background-color: #a5a5a5 !important;
+  margin-right: 25px !important; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
 
 hr {
   border: 1px solid black; }
@@ -111,6 +131,22 @@ footer {
   footer .version {
     text-align: center;
     padding-top: 15px !important; }
+
+.spCustomGradRed {
+  border: 1px solid #f5f2d5 !important;
+  background: -moz-radial-gradient(50% 50%, circle cover, #98ABBD 15%, #DC8381 100%) !important;
+  background: -webkit-radial-gradient(50% 50%, circle cover, #98ABBD 15%, #DC8381 100%) !important;
+  background: -o-radial-gradient(50% 50%, circle cover, #98ABBD 15%, #DC8381 100%) !important;
+  background: -ms-radial-gradient(50% 50%, circle cover, #98ABBD 15%, #DC8381 100%) !important;
+  background: radial-gradient(50% 50%, circle cover, #98ABBD 15%, #DC8381 100%) !important; }
+
+.spCustomGradGreen {
+  border: 1px solid #f5f2d5 !important;
+  background: -moz-radial-gradient(50% 50%, circle cover, #95b198 15%, #85BABC 100%) !important;
+  background: -webkit-radial-gradient(50% 50%, circle cover, #95b198 15%, #85BABC 100%) !important;
+  background: -o-radial-gradient(50% 50%, circle cover, #95b198 15%, #85BABC 100%) !important;
+  background: -ms-radial-gradient(50% 50%, circle cover, #95b198 15%, #85BABC 100%) !important;
+  background: radial-gradient(50% 50%, circle cover, #95b198 15%, #85BABC 100%) !important; }
 
 @media (max-width: 767px) {
   .show-xs {

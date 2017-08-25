@@ -27,21 +27,45 @@
             $scope.Time = new Date().toLocaleString('en-US', options);
         }, 1000);
 
+
+
         $scope.todoList = [];
 
         $scope.todoAdd = function () {
-            $scope.todoList.push({todoText: $scope.todoInput, done: false});
+
+            $scope.todoList.push({id: 1, todoText: $scope.todoInput, done: false});
+            localStorage.setItem('Todo List', JSON.stringify($scope.todoList));
             $scope.todoInput = "";
         };
 
-        $scope.remove = function () {
+        $scope.theList = JSON.parse(localStorage.getItem('Todo List'));
+
+        function removeTodo() {
             var oldList = $scope.todoList;
             $scope.todoList = [];
             angular.forEach(oldList, function (x) {
                 if (!x.done) $scope.todoList.push(x);
             });
+        }
+
+        function dontRemove() {
+            swal('Not Deleted.');
+        }
+
+        vm.remove = function () {
+            swal({
+                    title: 'Are You Sure?',
+                    type: 'warning',
+                    text: 'Are you sure you want to delete?',
+                    showConfirmButton: true,
+                    showCancelButton: true,
+                    allowOutsideClick: false
+                },
+                function (isConfirm) {
+                    isConfirm ? removeTodo() : dontRemove();
+                });
+
         };
     }
 })();
-
 

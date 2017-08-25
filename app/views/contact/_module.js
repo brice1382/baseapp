@@ -2,5 +2,6 @@
     'use strict';
 
     angular
-        .module('contact', []);
+        .module('contact', ['ngRoute']);
 })();
+

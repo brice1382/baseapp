@@ -5,9 +5,7 @@
         .module('spire', [
             'ngRoute',
             'ngAnimate',
-            'home',
-            'about',
-            'contact',
+            'views',
             'footer',
             'core-services',
             'version'
