@@ -5,9 +5,9 @@
         .module('home')
         .controller('HomeCtrl', HomeCtrl);
 
-    HomeCtrl.$inject = ['$scope', '$interval', 'SwalSvc'];
+    HomeCtrl.$inject = ['$scope', '$interval', 'SwalSvc', '$document', 'HomeSvc'];
 
-    function HomeCtrl($scope, $interval, SwalSvc) {
+    function HomeCtrl($scope, $interval, SwalSvc, $document, HomeSvc) {
         var vm = this;
 
         $scope.count = 0;
@@ -27,7 +27,49 @@
             $scope.Time = new Date().toLocaleString('en-US', options);
         }, 1000);
 
+        // $scope.theList = JSON.parse(localStorage.getItem('Todo List'));
 
+        vm.testtest = function (test) {
+            HomeSvc.getList().then(function (response) {
+                var Response = [];
+                console.log('The response ', response.data);
+                $scope.theList = response.data;
+                var test = response.data;
+                Response.push(test);
+                for (var i = 0; i <= test.length; i++) {
+                    var str = test[i].isDone.toString();
+                    (str != 4) ? $scope.notClassy = 'doneClass' : $scope.notClassy = '';
+                    console.log(test[i].isDone);
+                    // if (test[i].isDone === false) {
+                    //     $scope.classy = true;
+                    //     console.log('worked');
+                    // } else {
+                    //     $scope.notClassy = true;
+                    //     console.log('didnt work');
+                    // }
+                }
+            });
+
+        };
+
+        // $scope.$on('$viewContentLoaded', function () {
+        //     var g = localStorage.getItem('Todo List');
+        //     var list = JSON.parse(g);
+        //     for (var i = 0; i <= list.length; i++) {
+        //         var flag = list[i].done;
+        //         console.log('This value', flag);
+        //         if (flag === false) {
+        //             var td = $document[0].getElementById('id').innerHTML;
+        //             console.log(td);
+        //
+        //         } else {
+        //             var tdt = document.getElementsByClassName('td');
+        //             var clt = document.createAttribute('class');
+        //             clt.value = 'doneClass';
+        //             tdt.setAttributeNode(clt);
+        //         }
+        //     }
+        // });
 
         $scope.todoList = [];
 
@@ -38,7 +80,6 @@
             $scope.todoInput = "";
         };
 
-        $scope.theList = JSON.parse(localStorage.getItem('Todo List'));
 
         function removeTodo() {
             var oldList = $scope.todoList;

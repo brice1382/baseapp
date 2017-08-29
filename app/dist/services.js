@@ -15,49 +15,6 @@
     'use strict';
 
     angular
-        .module('auth-service', []);
-})();
-
-
-(function () {
-    'use strict';
-
-    angular
-        .module('auth-service')
-        .service('AuthSvc', AuthSvc);
-
-    AuthSvc.$inject = ['$http', '$rootScope'];
-
-    function AuthSvc($http, $rootScope) {
-        var sv = this;
-
-        var service = {
-            authenticate: authenticate,
-            unauthenticate: unauthenticate
-        };
-
-        $rootScope.isAuth = false;
-
-        return service;
-
-        function authenticate(user) {
-            return $http.post(user).then(function (response) {
-                $rootScope.isAuth = true;
-                console.log(response);
-            });
-        }
-
-        function unauthenticate() {
-            $rootScope.isAuth = false;
-        }
-    }
-})();
-
-
-(function () {
-    'use strict';
-
-    angular
         .module('admin-service', []);
 })();
 
@@ -102,7 +59,7 @@
     'use strict';
 
     angular
-        .module('upload-service', []);
+        .module('auth-service', []);
 })();
 
 
@@ -110,14 +67,33 @@
     'use strict';
 
     angular
-        .module('upload-service')
-        .service('UploadSvc', UploadSvc);
+        .module('auth-service')
+        .service('AuthSvc', AuthSvc);
 
-    UploadSvc.$inject = ['$http', '$q'];
+    AuthSvc.$inject = ['$http', '$rootScope'];
 
-    function UploadSvc($http, $q) {
+    function AuthSvc($http, $rootScope) {
+        var sv = this;
 
+        var service = {
+            authenticate: authenticate,
+            unauthenticate: unauthenticate
+        };
 
+        $rootScope.isAuth = false;
+
+        return service;
+
+        function authenticate(user) {
+            return $http.post(user).then(function (response) {
+                $rootScope.isAuth = true;
+                console.log(response);
+            });
+        }
+
+        function unauthenticate() {
+            $rootScope.isAuth = false;
+        }
     }
 })();
 
@@ -287,6 +263,30 @@
         function stopSpinner() {
             $rootScope.isLoading = false;
         }
+    }
+})();
+
+
+(function () {
+    'use strict';
+
+    angular
+        .module('upload-service', []);
+})();
+
+
+(function () {
+    'use strict';
+
+    angular
+        .module('upload-service')
+        .service('UploadSvc', UploadSvc);
+
+    UploadSvc.$inject = ['$http', '$q'];
+
+    function UploadSvc($http, $q) {
+
+
     }
 })();
 

@@ -1,0 +1,14 @@
+[
+  {
+    "todoText": "something funny",
+    "isDone": false
+  },
+  {
+    "todoText": "something else funny",
+    "isDone": false
+  },
+  {
+    "todoText": "something else else is funny",
+    "isDone": true
+  }
+]

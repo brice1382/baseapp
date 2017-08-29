@@ -109,6 +109,12 @@ hr {
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=29, Direction=135, Color=#000000);
   /*IE 5.5-7*/ }
 
+.textShadow {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#ffffff)" !important;
+  /*IE 8*/
+  text-shadow: 3px 3px 3px #ffffff !important;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#ffffff) !important; }
+
 .logo {
   border-radius: 10px;
   width: 50px !important;
@@ -157,6 +163,9 @@ footer {
 
   .mobile {
     height: auto !important; } }
+@media screen and (max-width: 640px) {
+  .nukeIt {
+    display: none !important; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .show-sm {
     display: none !important; }
@@ -178,6 +187,23 @@ footer {
 
   .showIt {
     display: none; } }
+#notDoneClass {
+  color: black;
+  background-color: red;
+  opacity: 0.5; }
+
+.doneClass {
+  color: black !important;
+  background-color: green !important;
+  opacity: 0.5 !important; }
+
+.base-class {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s; }
+
+.base-class.my-class {
+  color: red;
+  font-size: 3em; }
+
 .testFrom input.ng-valid {
   border: 2px solid green !important; }
 

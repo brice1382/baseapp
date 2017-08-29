@@ -6,8 +6,7 @@
         <div class="form-group">
             <div class="col-md-10 col-md-offset-1">
                 <label class="control-label"></label>
-                <input class="form-control" title="Enter Timestamp"
-                       ng-keyup="$event.keyCode == 13 ? tc.convert() : null"
+                <input class="form-control" title="Enter Timestamp" ng-keyup="$event.keyCode == 13 ? tc.convert() : null"
                        type="number" ng-model="tc.inputDate" placeholder="Enter TimeStamp...">
             </div>
         </div>
@@ -16,11 +15,10 @@
         <div class="form-group">
             <div class="col-md-3 col-md-offset-1">
                 <label class="control-label"></label>
-                <button type="button" class="btn btn-primary form-control " ng-click="tc.convert()">
+                <button type="button" class="btn btn-primary form-control" style="width: auto" ng-click="tc.convert()">
                     Convert
                     <i class="fa fa-check"></i>
                 </button>
-
             </div>
             <div class="col-md-3">
                 <label class="control-label"></label>

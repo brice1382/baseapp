@@ -34,12 +34,13 @@
                 <td>
                     {{x.todoText}}
                 </td>
-                <td>
-                    {{x.done}}
+                <td class="{{notClassy}}" id="notDoneClass">
+                    {{x.isDone}}
                 </td>
             </tr>
         </tbody>
     </table>
+    <button class="btn btn-danger" type="button" ng-click="hc.testtest()">Testing</button>
 </div>
 
 <!--<div class="container">-->
