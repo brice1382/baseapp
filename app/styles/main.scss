@@ -259,6 +259,38 @@ footer {
 }
 
 //==================================
+//              Tests
+//==================================
+
+.fadeIn {
+  animation-duration: 3s !important;
+}
+
+//==================================
+//            Animations
+//==================================
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  animation-delay: 3s;
+  animation-iteration-count: 6;
+  animation-name: flash;
+}
+
+.well {
+  height: 60px;
+}
+
+//==================================
 //              FILES
 //==================================
 // @import '_base';

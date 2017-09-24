@@ -3,27 +3,42 @@
 
     angular
         .module('utilities-service')
-        .service('UtilitiesSvc', UtilitiesSvc);
+        .provider('UtilitiesSvc', function () {
 
-    UtilitiesSvc.$inject = [];
+            this.$get = ['$rootScope', function($rootScope) {
 
-    function UtilitiesSvc() {
-        var sv = this;
+                $rootScope.isLoading = false;
+                $rootScope.punchedIn = false;
 
-        $rootScope.isLoading = false;
+                return {
+                    startSpinner: startSpinner,
+                    stopSpinner: stopSpinner,
+                    isPunchedIn: isPunchedIn,
+                    isPunchedOut: isPunchedOut
+                };
 
-        return {
-            startSpinner: startSpinner,
-            stopSpinner: stopSpinner
-        };
+                function startSpinner() {
+                    $rootScope.isLoading = true;
+                }
 
-        function startSpinner() {
-            $rootScope.isLoading = true;
-        }
+                function stopSpinner() {
+                    $rootScope.isLoading = false;
+                }
 
-        function stopSpinner() {
-            $rootScope.isLoading = false;
-        }
-    }
+                function isPunchedIn() {
+                    $rootScope.punchedIn = true;
+                    var punch = 'true';
+                    localStorage.setItem('punch', punch);
+                }
+
+                function isPunchedOut() {
+                    $rootScope.punchedIn = false;
+                    var punch = 'false';
+                    localStorage.setItem('punch', punch);
+                }
+
+
+            }];
+        });
 })();
 

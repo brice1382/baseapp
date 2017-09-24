@@ -1,0 +1,44 @@
+<div style="height: 100px"></div>
+<div class="container">
+    <div class="form-inputs">
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="well">
+                      <p style="text-align: center" ng-model="ttc.inTime">
+                         {{punchedIn}} {{ttc.inTime}}
+                      </p>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="well">
+                      <p style="text-align: center" ng-model="ttc.outTime">
+                          {{punchedIn}} {{ttc.outTime}}
+                      </p>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="well">
+                      <p style="text-align: center">
+                          {{ttc.hours}}
+                      </p>
+                  </div>
+              </div>
+              <div class="row">
+                  <form class="form" style="margin-left: 30px" role="form">
+                      <button ng-if="!punchedIn" class="btn btn-danger btn-lg" type="button" ng-click="ttc.punchIn()">
+                          Punch In
+                          <i class="fa fa-sign-in"></i>
+                      </button>
+                      <button ng-if="punchedIn" class="btn btn-danger btn-lg" type="button" ng-click="ttc.punchOut()">
+                          Punch Out
+                          <i class="fa fa-sign-out"></i>
+                      </button>
+                      <button class="btn btn-danger btn-lg" type="button" ng-click="ttc.getHours()">
+                          Total Hours
+                          <i class="fa fa-clock-o"></i>
+                      </button>
+                  </form>
+              </div>
+          </div>
+    </div>
+</div>

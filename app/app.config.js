@@ -22,6 +22,10 @@
             templateUrl: 'views/testing/testing.template.html',
             controller: 'TestingCtrl',
             controllerAs: 'tc'
+        }).when('/time-tracker', {
+            templateUrl: 'views/timeTracker/timeTracker.template.html',
+            controller: 'TimeTrackerCtrl',
+            controllerAs: 'ttc'
         }).when('/contact', {
             templateUrl: 'views/contact/contact.template.html',
             controller: 'ContactCtrl',

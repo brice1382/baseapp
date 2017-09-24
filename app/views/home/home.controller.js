@@ -27,7 +27,7 @@
             $scope.Time = new Date().toLocaleString('en-US', options);
         }, 1000);
 
-        // $scope.theList = JSON.parse(localStorage.getItem('Todo List'));
+        /** $scope.theList = JSON.parse(localStorage.getItem('"Tod o List')); */
 
         vm.testtest = function (test) {
             HomeSvc.getList().then(function (response) {

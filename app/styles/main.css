@@ -204,6 +204,22 @@ footer {
   color: red;
   font-size: 3em; }
 
+.fadeIn {
+  animation-duration: 3s !important; }
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1; }
+  25%, 75% {
+    opacity: 0; } }
+.flash {
+  animation-delay: 3s;
+  animation-iteration-count: 6;
+  animation-name: flash; }
+
+.well {
+  height: 60px; }
+
 .testFrom input.ng-valid {
   border: 2px solid green !important; }
 

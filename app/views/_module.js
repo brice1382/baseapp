@@ -6,6 +6,7 @@
             'home',
             'about',
             'contact',
-            'testing'
+            'testing',
+            'time-tracker'
         ]);
 })();

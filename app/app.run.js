@@ -5,9 +5,15 @@
         .module('spire')
         .run(run);
 
-    run.$inject = ['$rootScope', '$http', '$interval'];
+    run.$inject = ['$rootScope', '$http', '$interval', 'UtilitiesSvc'];
 
-    function run($rootScope, $http, $interval) {
+    function run($rootScope, $http, $interval, UtilitiesSvc) {
+        var checkOnRefresh = function () {
+            if (localStorage.getItem('punch') === 'true') {
+                $rootScope.punchedIn = true;
+            }
+        };
+
         $rootScope.$on('$viewContentLoaded', function () {
             if (location.hash.includes('home')) {
                 document.title = 'Spire | Home';
@@ -24,6 +30,10 @@
                     }
                 }
             }
+
+            checkOnRefresh();
+
+            $rootScope.UtilitiesSvc = UtilitiesSvc;
 
             var options = {
                 weekday: 'long'
