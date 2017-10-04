@@ -42,3 +42,51 @@
           </div>
     </div>
 </div>
+<div class="tab-pane fade in active" id="home-1">
+    <form action="#" id="sky-form" class="sky-form">
+        <header>Datepicker</header>
+
+        <fieldset>
+            <section>
+                <label class="label">Select single date</label>
+                <label class="input">
+                    <i class="icon-append fa fa-calendar"></i>
+                    <input type="text" name="date" id="date">
+                </label>
+            </section>
+
+            <label class="label">Select date range</label>
+            <div class="row">
+                <section class="col col-6">
+                    <label class="input">
+                        <i class="icon-append fa fa-calendar"></i>
+                        <input type="text" name="start" id="start" placeholder="Start date">
+                    </label>
+                </section>
+                <section class="col col-6">
+                    <label class="input">
+                        <i class="icon-append fa fa-calendar"></i>
+                        <input type="text" name="finish" id="finish" placeholder="Expected finish date">
+                    </label>
+                </section>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <section>
+                <label class="label">Select single date with inline datepicker</label>
+                <div id="inline"></div>
+            </section>
+
+            <label class="label">Select date range with inline datepickers</label>
+            <div class="row">
+                <section class="col col-6">
+                    <div id="inline-start"></div>
+                </section>
+                <section class="col col-6">
+                    <div id="inline-finish"></div>
+                </section>
+            </div>
+        </fieldset>
+    </form>
+</div>

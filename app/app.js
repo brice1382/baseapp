@@ -7,6 +7,7 @@
             'ngAnimate',
             'views',
             'footer',
+            'navbar',
             'core-services',
             'version'
         ]);

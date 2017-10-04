@@ -27,6 +27,9 @@ hr {
 .spacer {
   height: 100px; }
 
+.active {
+  backgraound-color: #ef9796 !important; }
+
 .spNav {
   margin-bottom: 0;
   padding-bottom: 0;
