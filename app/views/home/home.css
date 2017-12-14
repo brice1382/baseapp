@@ -1,0 +1,28 @@
+.fontStyle {
+  font-size: 20px;
+  text-align: center; }
+
+.centerFont {
+  text-align: center; }
+
+.defaultWidth {
+  width: 100px; }
+
+.spTodoList {
+  background-color: #2ae1ff;
+  height: 300px; }
+
+.spTodoListToggle {
+  background-color: #00b3ee;
+  height: 300px; }
+
+.spBtnWidth {
+  width: auto !important; }
+
+.marginBottom {
+  margin-bottom: 15px !important; }
+
+.spacer_xs {
+  height: 10px; }
+
+/*# sourceMappingURL=home.css.map */

@@ -1,96 +1,24 @@
 <div class="spacer"></div>
 <div class="buttonHolder">
-    <h1 style="text-align: center" ng-mousemove="count = count + 1">Hover over me and watch the count.</h1>
+    <h1 class="centerFont" ng-mousemove="count = count + 1">Hover over me and watch the count.</h1>
     Your counter {{count}}<br>
 
     <button type="button" ng-click="hc.reset()" class="btn btn-success">
         Reset
     </button>
 </div>
-
-<hr>
-
-<div class="spacer"></div>
-<div class="buttonHolder">
-    <span style="font-size: 20px; text-align: center">{{Time}}</span><br>
-    <span style="font-size: 20px; text-align: center">{{day}}</span>
+<div>
+    <div class="spacer"></div>
+    <div class="buttonHolder">
+        <span class="fontStyle">{{Time}}</span><br>
+        <span class="fontStyle">{{day}}</span>
+    </div>
+    <div class="spacer"></div>
 </div>
 <div class="spacer"></div>
-
 <div class="container">
-    <table class="table-bordered">
-        <thead>
-            <tr>
-                <td style="width: 100px">
-                    Item
-                </td>
-                <td style="width: 100px">
-                    Is Done
-                </td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="x in theList track by x.todoText">
-                <td>
-                    {{x.todoText}}
-                </td>
-                <td class="{{notClassy}}" id="notDoneClass">
-                    {{x.isDone}}
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <button class="btn btn-danger" type="button" ng-click="hc.testtest()">Testing</button>
-</div>
-
-<!--<div class="container">-->
-    <!--<div class="col-md-6">-->
-        <!--<div class="container" style="background-color: #d0e9c6">-->
-
-            <!--<form ng-submit="todoAdd()">-->
-                <!--<div class="form-group">-->
-                    <!--<div class="row">-->
-                        <!--<div class="col-md-10 col-md-offset-1">-->
-                            <!--<label class="control-label"></label>-->
-                            <!--<input class="form-control" type="text" ng-model="todoInput" size="50"-->
-                                   <!--placeholder="Add Todo"><br>-->
-                        <!--</div>-->
-                        <!--<div class="col-md-3 col-md-offset-1">-->
-                            <!--<input class="btn btn-primary form-control spBtnWidth" type="submit" value="Add Todo">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</form>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-6">-->
-        <!--<div class="container" style="height: auto">-->
-            <!--<div class="spacer"></div>-->
-            <!--<form>-->
-                <!--<div class="form-group">-->
-                    <!--<div class="row">-->
-                        <!--<div class="col-md-10 col-md-offset-1">-->
-                            <!--<div ng-repeat="x in todoList">-->
-                                <!--<label class="control-label"></label>-->
-                                <!--<input type="checkbox" title="checkbox" ng-model="x.done"> - {{x.todoText}}-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="col-md-3 col-md-offset-1">-->
-                            <!--<label class="control-label"></label>-->
-                            <!--<button class="btn btn-warning form-control spBtnWidth" ng-click="hc.remove()">-->
-                                <!--Remove Marked-->
-                            <!--</button>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</form>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-<div class="spacer"></div>
-<div class="container">
-    <div class="col-md-6" style="background-color: #2ae1ff; height: 300px">
-        <h1 style="text-align: center">Todo List</h1>
+    <div class="col-md-6 spTodoList">
+        <h1 class="centerFont">Todo List</h1>
         <form ng-submit="todoAdd()">
             <div class="col-md-10 col-md-offset-1">
                 <label class="control-label"></label>
@@ -102,19 +30,22 @@
             </div>
         </form>
     </div>
-    <div class="col-md-6" style="background-color: #00b3ee; height: 300px">
+    <div class="col-md-6 spTodoListToggle">
+        <div class="col-md-3 col-md-offset-1 marginBottom">
+            <label class="control-label"></label>
+            <button class="btn btn-warning form-control spBtnWidth" ng-click="hc.removeTodo()">
+                Remove Marked
+                <i class="fa fa-trash"></i>
+            </button>
+            <!-- TODO: Need to figure out why the spacer value isn't being used thus needing to put inline. -->
+            <div class="spacer_xs" style="height: 10px"></div>
+        </div>
+        <br>
         <div class="col-md-10 col-md-offset-1">
             <div ng-repeat="x in todoList">
                 <label class="control-label"></label>
                 <input type="checkbox" title="checkbox" ng-model="x.done"> - {{x.todoText}}
             </div>
-        </div>
-        <div class="col-md-3 col-md-offset-1">
-            <label class="control-label"></label>
-            <button class="btn btn-warning form-control spBtnWidth" style="width: auto" ng-click="hc.remove()">
-                Remove Marked
-                <i class="fa fa-trash"></i>
-            </button>
         </div>
     </div>
 </div>

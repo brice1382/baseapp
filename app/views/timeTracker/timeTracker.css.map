@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,OAAQ;EACN,MAAM,ECHF,KAAK;;ADMX,WAAY;EACV,UAAU,EAAE,MAAM;;AAGpB,eAAe;EACb,WAAW,EAAE,IAAI",
+"sources": ["timeTracker.scss","../../styles/_variables.scss"],
+"names": [],
+"file": "timeTracker.css"
+}

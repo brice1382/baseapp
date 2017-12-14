@@ -7,6 +7,7 @@
             'about',
             'contact',
             'testing',
+            'upload',
             'time-tracker'
         ]);
 })();

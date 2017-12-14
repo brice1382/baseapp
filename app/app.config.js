@@ -22,6 +22,10 @@
             templateUrl: 'views/testing/testing.template.html',
             controller: 'TestingCtrl',
             controllerAs: 'tc'
+        }).when('/upload', {
+            templateUrl: 'views/uploads/upload.template.html',
+            controller: 'UploadCtrl',
+            controllerAs: 'uc'
         }).when('/time-tracker', {
             templateUrl: 'views/timeTracker/timeTracker.template.html',
             controller: 'TimeTrackerCtrl',

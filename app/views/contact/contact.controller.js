@@ -5,10 +5,11 @@
         .module('contact')
         .controller('ContactCtrl', ContactCtrl);
 
-    ContactCtrl.$inject = [];
+    ContactCtrl.$inject = ['$http'];
 
-    function ContactCtrl() {
-
+    function ContactCtrl($http) {
+        // TODO: Im preparing to make an http call right here and will need to move that portion to the service.
     }
 })();
 
+// TODO: File Instection Done.

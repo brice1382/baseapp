@@ -18,7 +18,6 @@
             inTime = new Date().getTime();
             localStorage.setItem('inTime', inTime);
             UtilitiesSvc.isPunchedIn();
-            // location.reload();
             vm.inTime = localStorage.getItem('inTime');
         };
 
@@ -41,4 +40,4 @@
         }
     }
 })();
-
+// TODO: File Instection Done.

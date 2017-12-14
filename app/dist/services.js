@@ -233,6 +233,30 @@
     'use strict';
 
     angular
+        .module('upload-service', []);
+})();
+
+
+(function () {
+    'use strict';
+
+    angular
+        .module('upload-service')
+        .service('UploadSvc', UploadSvc);
+
+    UploadSvc.$inject = ['$http', '$q'];
+
+    function UploadSvc($http, $q) {
+
+
+    }
+})();
+
+
+(function () {
+    'use strict';
+
+    angular
         .module('utilities-service', []);
 })();
 
@@ -279,29 +303,5 @@
 
             }];
         });
-})();
-
-
-(function () {
-    'use strict';
-
-    angular
-        .module('upload-service', []);
-})();
-
-
-(function () {
-    'use strict';
-
-    angular
-        .module('upload-service')
-        .service('UploadSvc', UploadSvc);
-
-    UploadSvc.$inject = ['$http', '$q'];
-
-    function UploadSvc($http, $q) {
-
-
-    }
 })();
 

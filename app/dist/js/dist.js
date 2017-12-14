@@ -7,8 +7,16 @@
             'about',
             'contact',
             'testing',
+            'upload',
             'time-tracker'
         ]);
+})();
+
+(function () {
+    'use strict';
+
+    angular
+        .module('upload', ['ngRoute']);
 })();
 
 (function () {
@@ -50,6 +58,74 @@
         .module('time-tracker', ['ngRoute']);
 })();
 
+
+(function () {
+    'use strict';
+
+    angular
+        .module('upload')
+        .controller('UploadCtrl', UploadCtrl);
+
+    UploadCtrl.$inject = ['$scope', 'FileUploader'];
+
+    function UploadCtrl($scope, FileUploader) {
+            var uploader = $scope.uploader = new FileUploader({
+                url: ''
+            });
+
+            uploader.filters.push({
+                name: 'syncFilter',
+                fn: function(item /*{File|FileLikeObject}*/, options) {
+                    console.log('syncFilter');
+                    return this.queue.length < 10;
+                }
+            });
+
+            uploader.filters.push({
+                name: 'asyncFilter',
+                fn: function(item /*{File|FileLikeObject}*/, options, deferred) {
+                    console.log('asyncFilter');
+                    setTimeout(deferred.resolve, 1e3);
+                }
+            }); 
+
+            uploader.onWhenAddingFileFailed = function(item /*{File|FileLikeObject}*/, filter, options) {
+                console.info('onWhenAddingFileFailed', item, filter, options);
+            };
+            uploader.onAfterAddingFile = function(fileItem) {
+                console.info('onAfterAddingFile', fileItem);
+            };
+            uploader.onAfterAddingAll = function(addedFileItems) {
+                console.info('onAfterAddingAll', addedFileItems);
+            };
+            uploader.onBeforeUploadItem = function(item) {
+                console.info('onBeforeUploadItem', item);
+            };
+            uploader.onProgressItem = function(fileItem, progress) {
+                console.info('onProgressItem', fileItem, progress);
+            };
+            uploader.onProgressAll = function(progress) {
+                console.info('onProgressAll', progress);
+            };
+            uploader.onSuccessItem = function(fileItem, response, status, headers) {
+                console.info('onSuccessItem', fileItem, response, status, headers);
+            };
+            uploader.onErrorItem = function(fileItem, response, status, headers) {
+                console.info('onErrorItem', fileItem, response, status, headers);
+            };
+            uploader.onCancelItem = function(fileItem, response, status, headers) {
+                console.info('onCancelItem', fileItem, response, status, headers);
+            };
+            uploader.onCompleteItem = function(fileItem, response, status, headers) {
+                console.info('onCompleteItem', fileItem, response, status, headers);
+            };
+            uploader.onCompleteAll = function() {
+                console.info('onCompleteAll');
+            };
+
+            console.info('uploader', uploader);
+    }
+})();
 
 (function () {
     'use strict';
@@ -234,7 +310,7 @@
                 Response.push(test);
                 for (var i = 0; i <= test.length; i++) {
                     var str = test[i].isDone.toString();
-                    (str != 4) ? $scope.notClassy = 'doneClass' : $scope.notClassy = '';
+                    (str != 4) ? ($scope.notClassy = 'doneClass') : ($scope.notClassy = '');
                     console.log(test[i].isDone);
                     // if (test[i].isDone === false) {
                     //     $scope.classy = true;
@@ -337,51 +413,6 @@
     'use strict';
 
     angular
-        .module('time-tracker')
-        .controller('TimeTrackerCtrl', TimeTrackerCtrl);
-
-    TimeTrackerCtrl.$inject = ['UtilitiesSvc'];
-
-    function TimeTrackerCtrl(UtilitiesSvc) {
-        var vm = this;
-
-        vm.getSome = function () {
-            vm.hh = new Date().getHours();
-        };
-
-        vm.punchIn = function (inTime) {
-            inTime = new Date().getTime();
-            localStorage.setItem('inTime', inTime);
-            UtilitiesSvc.isPunchedIn();
-            // location.reload();
-            vm.inTime = localStorage.getItem('inTime');
-        };
-
-        vm.punchOut = function (outTime) {
-            outTime = new Date().getTime();
-            localStorage.setItem('outTime', outTime);
-            UtilitiesSvc.isPunchedOut();
-            vm.outTime = localStorage.getItem('outTime');
-        };
-
-        vm.getHours = function (totalTime) {
-            var inTime = localStorage.getItem('inTime');
-            var outTime = localStorage.getItem('outTime');
-            var saves = "".concat('Punch In Time: ' + inTime.toString() + '\r\n',
-                'Punch Out Time: ' + outTime.toString());
-            localStorage.setItem('daily punches', JSON.stringify({ PunchIn: inTime, PunchOut: outTime}));
-            console.log(saves);
-            totalTime = Math.abs((outTime - inTime) / 1000) / (60 * 60);
-            vm.hours = totalTime * 60;
-        }
-    }
-})();
-
-
-(function () {
-    'use strict';
-
-    angular
         .module('testing')
         .controller('TestingCtrl', TestingCtrl);
 
@@ -440,6 +471,51 @@
         clipboard.on('error', function (e) {
             console.log(e);
         })
+    }
+})();
+
+
+(function () {
+    'use strict';
+
+    angular
+        .module('time-tracker')
+        .controller('TimeTrackerCtrl', TimeTrackerCtrl);
+
+    TimeTrackerCtrl.$inject = ['UtilitiesSvc'];
+
+    function TimeTrackerCtrl(UtilitiesSvc) {
+        var vm = this;
+
+        vm.getSome = function () {
+            vm.hh = new Date().getHours();
+        };
+
+        vm.punchIn = function (inTime) {
+            inTime = new Date().getTime();
+            localStorage.setItem('inTime', inTime);
+            UtilitiesSvc.isPunchedIn();
+            // location.reload();
+            vm.inTime = localStorage.getItem('inTime');
+        };
+
+        vm.punchOut = function (outTime) {
+            outTime = new Date().getTime();
+            localStorage.setItem('outTime', outTime);
+            UtilitiesSvc.isPunchedOut();
+            vm.outTime = localStorage.getItem('outTime');
+        };
+
+        vm.getHours = function (totalTime) {
+            var inTime = localStorage.getItem('inTime');
+            var outTime = localStorage.getItem('outTime');
+            var saves = "".concat('Punch In Time: ' + inTime.toString() + '\r\n',
+                'Punch Out Time: ' + outTime.toString());
+            localStorage.setItem('daily punches', JSON.stringify({ PunchIn: inTime, PunchOut: outTime}));
+            console.log(saves);
+            totalTime = Math.abs((outTime - inTime) / 1000) / (60 * 60);
+            vm.hours = totalTime * 60;
+        }
     }
 })();
 

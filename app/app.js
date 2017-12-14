@@ -5,6 +5,7 @@
         .module('spire', [
             'ngRoute',
             'ngAnimate',
+            'angularFileUpload',
             'views',
             'footer',
             'navbar',
